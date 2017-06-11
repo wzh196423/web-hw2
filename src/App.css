@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.clock {
+  /*
+  flex-direction: row;
+  display: flex;
+  position: fixed;
+  width: 20%;
+  height: 20%;
+  left:50%;
+  top: 40%;*/
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border:2px solid black;
+  position: relative;
+  margin:auto;
+  box-sizing: border-box;
+  display: block;
+}
+.clock ul {
+  height: 200px;
+  position: relative;
+}
+ul,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.clock ul li{
+  width: 1px;
+  height:6px;
+  background-color: black;
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform-origin: center 98px;
+}
+.clock ul li:nth-of-type(5n+1){
+  height: 12px;
+}
+.clock:after{
+  display: block;
+  content: '\0020';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left:50%;
+  margin-left: -5px;
+  top:50%;
+  margin-top: -5px;
+  border-radius: 50%;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+/*
+.clock > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, .4);
+  background-color: white;
+}
+*/
+.minute {
+  /*
+  width: 3px;
+  height: 95px;
+  transform-origin: bottom;*/
+  width: 4px;
+  height: 40%;
+  margin-left: -2px;
+  background-color: grey;
+  position: absolute;
+}
+
+.hour {
+  /*
+  width: 4px;
+  height: 65px;
+  background-color: blue;
+  transform-origin: bottom;*/
+  width: 6px;
+  height: 30%;
+  margin-left: -3px;
+  background-color: black;
+  position: absolute;
+}
+
+.second {
+  /*
+  width: 2px;
+  height: 105px;
+  background-color: grey;
+  transform-origin: bottom;*/
+  width: 2px;
+  height: 49%;
+  margin-left: -1px;
+  background-color: red;
+  position: absolute;
+}
+.hour,.minute,.second {
+  display: block;
+  left:50%;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+}
+.info {
+  position: relative;
+}
